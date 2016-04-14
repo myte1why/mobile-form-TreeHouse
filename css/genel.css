@@ -1,0 +1,224 @@
+
+/*base styles */
+*,
+*:before,
+*:after{
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+html,
+body {
+  font-family: 'Merriweather', serif;
+  background-color: #E6ECE6;
+  max-width: 99vw;
+}
+
+header{
+    width: 100%;
+    margin: 0;
+    padding: 1em 0;
+    height: 3.75em;
+    background-color: #5B5C65;
+}
+
+.container{
+  min-height: 86.25vh;
+  width: 100%;
+  padding: 0 1em;
+}
+footer{
+  min-height: 10vh;
+  text-align: center;
+  font-size: 1.25em;
+  vertical-align: middle;
+  font-style: italic;
+  color: grey;
+}
+h1,h2{
+	font-weight: bold;
+}
+h3,
+label{
+	font-weight: normal;
+}
+label{
+	line-height: 2em;
+	display: block;
+
+}
+
+h1{
+  margin: 0;
+  font-size: 1.75em;
+}
+
+legend,
+h2{
+  font-size: 1.5em;
+}
+
+h3{
+    font-size: 1.1em;    
+    font-weight: inherit;
+}
+
+/* text align rule */
+.text_center{
+  text-align: center;
+}
+
+
+/* float clearfix */
+.clearfix::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+
+/* form style */
+form {
+  background-color: inherit;
+  padding: 1em 0;
+
+}
+input{
+	width: 100%;
+	}
+fieldset{
+  margin-top: 2em;
+  padding:0;
+  width: 100%;
+	border: none;
+}
+.form_header{
+	    border-bottom: solid 2px black;
+}
+.form_header h3{
+	border-bottom: solid 6px black;
+	margin-bottom: 4px;
+	padding-bottom: 2em;
+}
+
+label input{
+	width: auto;
+  vertical-align: middle;
+}
+
+
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,
+select {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  font-size: 16px;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 15px;
+  width: 100%;
+  background-color: #E5E8EC;
+  color: #8a97a0;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  margin-bottom: 30px;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+textarea:focus{
+	border: 1px solid darkblue;
+}
+
+select {
+  padding: 6px;
+  height: 3em;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 0 4px 8px 0;
+}
+
+button {
+  padding: 0.75em;
+  color: #FFF;
+  background-color: #1B2F21;
+  font-size: 2em;
+  font-style: normal;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid #1B2F21;
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+  margin-bottom: 10px;
+}
+input::-webkit-input-placeholder { /* WebKit browsers */
+    direction: rtl;
+}
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    direction: rtl;
+}
+input::-moz-placeholder { /* Mozilla Firefox 19+ but I'm not sure about working */
+    direction: rtl;
+}
+input:-ms-input-placeholder { /* Internet Explorer 10+ */
+    direction: rtl;
+}
+
+
+/* link styles */ 
+a,
+a:visited{
+  color: white;  
+}
+a:hover{
+  color: #1B2F21;
+}
+
+
+
+fieldset:nth-child(1){
+  border-bottom: solid 2px black;
+}
+
+/* media query set */
+@media (min-width : 426px ) {
+	.container{	
+  width: 80%;
+  margin: 0 auto;
+	}
+
+}
+@media ( min-width : 759px ) {
+	.container{
+		width: 60%;
+		margin: 0 auto;
+    padding: 0;
+	}
+  .options_for_check_and_radio{
+    display: inline;
+    width: auto;
+    margin-right: 2em;
+  }
+}
