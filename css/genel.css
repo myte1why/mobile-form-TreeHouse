@@ -7,11 +7,12 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   text-decoration: none;
+    margin-bottom: 1em;
 }
 html,
 body {
   font-family: 'Merriweather', serif;
-  background-color: #E6ECE6;
+  background-color: #E0E0E0;
   max-width: 99vw;
 }
 
@@ -44,7 +45,8 @@ label{
 	font-weight: normal;
 }
 label{
-	line-height: 2em;
+  font-size: 1em;
+	line-height: 3em;
 	display: block;
 
 }
@@ -59,10 +61,15 @@ h2{
   font-size: 1.5em;
 }
 
+legend{
+  padding: 1em 0;
+}
+
 h3{
     font-size: 1.1em;    
     font-weight: inherit;
 }
+
 
 /* text align rule */
 .text_center{
@@ -90,7 +97,6 @@ input{
 	width: 100%;
 	}
 fieldset{
-  margin-top: 2em;
   padding:0;
   width: 100%;
 	border: none;
@@ -127,14 +133,15 @@ select {
   border: none;
   font-size: 16px;
   height: auto;
-  margin: 0;
   outline: 0;
   padding: 15px;
   width: 100%;
   background-color: #E5E8EC;
   color: #8a97a0;
   box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
-  margin-bottom: 30px;
+}
+textarea{
+  height: 10em;
 }
 input[type="text"]:focus,
 input[type="password"]:focus,
@@ -148,6 +155,7 @@ input[type="time"]:focus,
 input[type="url"]:focus,
 textarea:focus{
 	border: 1px solid darkblue;
+  background-color: #C8C8F5;
 }
 
 select {
@@ -157,7 +165,9 @@ select {
 
 input[type="radio"],
 input[type="checkbox"] {
-  margin: 0 4px 8px 0;
+  width: 1em;
+  height: 1em;
+  margin-right: 1em;
 }
 
 button {
@@ -171,7 +181,6 @@ button {
   border: 1px solid #1B2F21;
   border-width: 1px 1px 3px;
   box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
-  margin-bottom: 10px;
 }
 input::-webkit-input-placeholder { /* WebKit browsers */
     direction: rtl;
@@ -196,7 +205,10 @@ a:hover{
   color: #1B2F21;
 }
 
-
+/* margin rules */
+.margin_rule{
+  margin-bottom: 1em;
+}
 
 fieldset:nth-child(1){
   border-bottom: solid 2px black;
@@ -210,15 +222,35 @@ fieldset:nth-child(1){
 	}
 
 }
-@media ( min-width : 759px ) {
+@media ( min-width : 769px ) {
 	.container{
 		width: 60%;
 		margin: 0 auto;
     padding: 0;
 	}
-  .options_for_check_and_radio{
-    display: inline;
-    width: auto;
-    margin-right: 2em;
+  .form_inline label{
+        display: inline-block;
+    width: 29%;
+  }
+
+label:hover{
+  color: red;
+  font-style: italic;
+
+}
+
+  .form_inline input[type="text"],
+  .form_inline input[type="password"],
+  .form_inline input[type="date"],
+  .form_inline input[type="datetime"],
+  .form_inline input[type="email"],
+  .form_inline input[type="number"],
+  .form_inline input[type="search"],
+  .form_inline input[type="tel"],
+  .form_inline input[type="time"],
+  .form_inline input[type="url"],
+  .form_inline select{
+       width: 70%;
+      display: inline-block;
   }
 }
